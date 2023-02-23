@@ -1,0 +1,156 @@
+/* General START */
+:root {
+    --color-1: #8396DD;
+    --text-color: #ECEEF6;
+    --color-3: #242A41;
+    --color-4: #263C8B;
+    --color-5: #008000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-3) !important;
+}
+
+.currentPage {
+    background-color: var(--color-4) !important;
+}
+
+.copied {
+    background-color: var(--color-5) !important;
+}
+
+.input-and-buttons {
+    direction: rtl;
+    outline: none;
+    width: 100%;
+    background-color: var(--color-1);
+    border: none;
+    color: var(--text-color);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.rotateUp{
+    transform: rotateX(180deg);
+}
+/* General END */
+
+/* css reset START */
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+/* css reset END */
+/* nav START */
+
+/* nav items */
+.nav-items {
+    background-color: var(--color-1);
+    border-radius: 20px;
+    cursor: pointer;
+
+    transition: .2s linear all;
+}
+
+.nav-items a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav-items:hover {
+    background-color: var(--color-4);
+}
+
+.nav-items:active {
+    transform: scale(.9);
+}
+
+/* nav END */
+/* input section START */
+#input-section {
+    margin-top: 100px;
+}
+
+#input-box input::placeholder {
+    color: var(--text-color);
+}
+
+
+/* input box */
+#input-box {
+    background-color: var(--color-4);
+}
+
+/* button */
+#input-box button:hover {
+    background-color: var(--color-3);
+}
+
+#input-box button:active {
+    transform: scale(.9);
+}
+
+/* converted value */
+#converted-value {
+    cursor: pointer;
+}
+
+/* input section END */
+
+/* lessons section START */
+#lessons-box {
+    direction: rtl;
+}
+
+/* each-lesson-box */
+.each-lesson-box {
+    display: flex;
+}
+
+.each-lesson-box span {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.each-lesson-box span:first-of-type {
+    min-width: 400px;
+}
+
+/* lessons list */
+
+/* term header */
+.term-header{
+    cursor: pointer;
+}
+.terms-box h4,
+.terms-box p {
+    color: var(--text-color);
+}
+.terms-box i{
+    vertical-align: middle;
+    transition: .2s;
+}
+.copy-value {
+    cursor: pointer;
+    background-color: var(--color-1);
+    transition: .1s linear all;
+}
+
+.copy-value:hover {
+    background-color: var(--color-4);
+}
+
+.copy-value:active {
+    transform: scale(.9);
+}
+
+/* lessons section END */
