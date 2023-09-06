@@ -3,7 +3,7 @@ let termHeaders;
 let convertedValue = "";
 
 // Importing the termData object from the data.js file
-import { termData } from "./data.js";
+import { termData } from "../../js/data.js";
 
 // Event listener for the "DOMContentLoaded" event
 window.addEventListener("DOMContentLoaded", init);
