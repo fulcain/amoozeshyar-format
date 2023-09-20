@@ -27,48 +27,48 @@ copyEventListener(convertedValueEl);
 
 // Attaching a "click" event listener to the convertBtn element
 convertBtn.addEventListener("click", () => {
-	if (userInputEl.value.length > 0) {
-		// Assigning the value of userInputEl to userInputValue
-		userInputValue = userInputEl.value;
+    if (userInputEl.value.length > 0) {
+        // Assigning the value of userInputEl to userInputValue
+        userInputValue = userInputEl.value;
 
-		// Calling the convertFormat function with userInputValue and assigning its return value to the value property of convertedValueEl
-		convertedValueEl.value = convertFormat(userInputValue);
-	} else {
-		// Displaying an alert if no value is entered in userInputEl
-		alert("لطفا یک مقدار وارد کنید");
-	}
+        // Calling the convertFormat function with userInputValue and assigning its return value to the value property of convertedValueEl
+        convertedValueEl.value = convertFormat(userInputValue);
+    } else {
+        // Displaying an alert if no value is entered in userInputEl
+        alert("لطفا یک مقدار وارد کنید");
+    }
 });
 
 // Attaching a "click" event listener to the newValueBtn element
 newValueBtn.addEventListener("click", () => {
-	// Clearing the value of userInputEl and convertedValueEl
-	userInputEl.value = "";
-	convertedValueEl.value = "";
+    // Clearing the value of userInputEl and convertedValueEl
+    userInputEl.value = "";
+    convertedValueEl.value = "";
 
-	// Removing the "copied" class from convertedValueEl
-	convertedValueEl.classList.remove("copied");
+    // Removing the "copied" class from convertedValueEl
+    convertedValueEl.classList.remove("copied");
 });
 
 // Defining the copyEventListener function that attaches a "click" event listener to the clickedElement
-const copyEventListener = (clickedElement) => {
-	clickedElement.addEventListener("click", () => {
-		if (convertedValueEl.value.length > 0) {
-			// Copying the value of convertedValueEl to the clipboard
-			navigator.clipboard.writeText(convertedValueEl.value);
+function copyEventListener(clickedElement) {
+    clickedElement.addEventListener("click", () => {
+        if (convertedValueEl.value.length > 0) {
+            // Copying the value of convertedValueEl to the clipboard
+            navigator.clipboard.writeText(convertedValueEl.value);
 
-			// Adding the "copied" class to convertedValueEl
-			convertedValueEl.classList.add("copied");
-		} else {
-			// Displaying an alert if no value is converted in convertedValueEl
-			alert("لطفا ابتدا تبدیل کنید");
-		}
-	});
-};
+            // Adding the "copied" class to convertedValueEl
+            convertedValueEl.classList.add("copied");
+        } else {
+            // Displaying an alert if no value is converted in convertedValueEl
+            alert("لطفا ابتدا تبدیل کنید");
+        }
+    });
+}
 
 // Selecting the HTML element with ID "input-box"
 const formEl = document.querySelector("#input-box");
 
 // Attaching a "submit" event listener to the formEl element
 formEl.addEventListener("submit", (e) => {
-	e.preventDefault();
+    e.preventDefault();
 });
